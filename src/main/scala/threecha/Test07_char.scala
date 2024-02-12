@@ -25,6 +25,18 @@ object Test07_char {
     println(c7)
     println(c5.toByte)
 
+    // 空类型Unit
+    def mUnit():Unit = {
+      println("Unit 测试方法")
+    }
+    val  a : Unit = mUnit()
+    println(a)
+
+    // 空引用类型 Null 唯一实例null
+//    var tempThreeX = new ThreeX(30,"sancha")
+//    tempThreeX = null
+//    println(" test for Null " +  tempThreeX)
+
   }
 
 }
