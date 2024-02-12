@@ -1,4 +1,4 @@
-package main.scala.chapter_val
+package main.scala.threecha
 
 object Test03 {
   // test03 用于验证字符串相关方法
