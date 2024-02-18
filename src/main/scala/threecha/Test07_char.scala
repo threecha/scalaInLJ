@@ -30,7 +30,7 @@ object Test07_char {
       println("Unit 测试方法")
     }
     val  a : Unit = mUnit()
-    println(a)
+    println(a)// 这里会输出一个空括号
 
     // 空引用类型 Null 唯一实例null
 //    var tempThreeX = new ThreeX(30,"sancha")
