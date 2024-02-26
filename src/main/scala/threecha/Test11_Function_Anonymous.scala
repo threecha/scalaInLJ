@@ -1,6 +1,6 @@
 package main.scala.threecha
 
-object Test10_Function_Anonymous {
+object Test11_Function_Anonymous {
   /**
    * 匿名函数 Anonymous Function
    * 不关心函数名称时，函数名称和def也可以省略，去掉返回值类型，将=修改为=>定义为匿名函数
@@ -11,7 +11,7 @@ object Test10_Function_Anonymous {
    * 2. 若省略类型后 参数唯一  可以删除参数列表括号
    * 3. 匿名函数主体只有一行 {}可以省略
    * 4. 如果参数只出现一次 那么参数也可以省略 后面出现的参数用_代替
-   * 5. 若可以推断出当前传入的 print 是函数体，而不是调用语句 那么可以省掉下划线。直接讲函数名作为参数传递
+   * 5. 若可以推断出当前  传入的 print 是函数体，而不是调用语句 那么可以省掉下划线。直接讲函数名作为参数传递
    *
    */
   def main(args: Array[String]): Unit = {
