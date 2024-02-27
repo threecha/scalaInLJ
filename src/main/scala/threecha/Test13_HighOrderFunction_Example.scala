@@ -96,10 +96,28 @@ object Test13_HighOrderFunction_Example {
     // def func_v3(a: Int) = (b: String) => (c: Char) => if (a == 0 && b == "" && c == '0') false else true
     def func_v5(a: Int)(b: String)(c: Char) = if (a == 0 && b == "" && c == '0') false else true
 
+    def funcCurrying(a: Int, b: Int) = a + b
+
+    def funcCurrying_v1(a: Int)(b: Int) = a + b
+
+    // funcCurrying_v1(1) 表示我们调用了柯里化函数 add 的第一个参数列表，提供了参数 1，而下划线 _ 则表示剩下的参数列表尚未提供，此时函数并未完全调用，而是返回了一个新的函数，该函数期望接受剩余的参数
+    val addFirst = funcCurrying_v1(1) _
+    val addNext = addFirst(2)
+
+    println(addNext)
 
 
+    /**
+     * Currying 函数的展开形式
+     *
+     *  function _ ：_ 则表示剩下的参数列表尚未提供，此时函数并未完全调用，而是返回了一个新的函数，该函数期望接受剩余的参数
+     */
 
+    def funcCurrying_2(a: Int) =
+      def f2(b: Int) = {
+        a + b
+      }
 
-
+      f2 _
   }
 }
