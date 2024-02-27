@@ -69,7 +69,8 @@ object Test13_HighOrderFunction_Example {
 
     println(func_v2(1)("")('0'))
     println(func_v2(0)("")('0'))
-
+    
+    //继续简化
     def func_v3(a: Int) = (b: String) => (c: Char) => if (a == 0 && b == "" && c == '0') false else true
 
     def func_v4(a: Int): String => Char => Boolean = b => c => if (a == 0 && b == "" && c == '0') false else true
@@ -90,6 +91,8 @@ object Test13_HighOrderFunction_Example {
      * 函数柯里化
      *
      * 直接在外层定义参数 把内层函数的访问放在外层去定义
+     *
+     * 如果柯里化的参数是个代码块 外层的括号是可以省略的 这里可以参考 while的自定义实现形式
      *
      */
 
