@@ -83,7 +83,23 @@ object Test13_HighOrderFunction_Example {
     println(func_v3(0)("")('0'))
 
     println(func_v4(1)("")('0'))
-    println(func_v4(0)("")('0'))
+    println(func_v4(0)("")('0')) // 逐层调用
+
+
+    /**
+     * 函数柯里化
+     *
+     * 直接在外层定义参数 把内层函数的访问放在外层去定义
+     *
+     */
+
+    // def func_v3(a: Int) = (b: String) => (c: Char) => if (a == 0 && b == "" && c == '0') false else true
+    def func_v5(a: Int)(b: String)(c: Char) = if (a == 0 && b == "" && c == '0') false else true
+
+
+
+
+
 
   }
 }
